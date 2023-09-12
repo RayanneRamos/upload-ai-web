@@ -3,6 +3,13 @@ import { FileVideo, Github, Upload } from "lucide-react";
 import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Label } from "./components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+} from "./components/ui/select";
+import { SelectValue } from "@radix-ui/react-select";
 
 export function App() {
   return (
@@ -73,7 +80,20 @@ export function App() {
           </form>
           <Separator />
           <form className="space-y-6">
-            <div className="space-y-1"></div>
+            <div className="space-y-2">
+              <label>Modelo</label>
+              <Select disabled defaultValue="gpt3.5">
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="gpt3.5">GPT 3.5-turbo 16k</SelectItem>
+                </SelectContent>
+              </Select>
+              <span className="block text-xs text-muted-foreground italic">
+                Você poderá customizar essa opção em breve
+              </span>
+            </div>
           </form>
         </aside>
       </main>
