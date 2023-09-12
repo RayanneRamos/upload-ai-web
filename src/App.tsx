@@ -10,6 +10,7 @@ import {
   SelectTrigger,
 } from "./components/ui/select";
 import { SelectValue } from "@radix-ui/react-select";
+import { Slider } from "./components/ui/slider";
 
 export function App() {
   return (
@@ -94,6 +95,16 @@ export function App() {
                 Você poderá customizar essa opção em breve
               </span>
             </div>
+            <Separator />
+            <div className="space-y-4">
+              <label>Temperatura</label>
+              <Slider min={0} max={1} step={0.1} />
+              <span className="block text-xs text-muted-foreground italic leading-relaxed">
+                Valores mais altos tendem a deixar o resultado mais criativo e
+                com possíveis erros.
+              </span>
+            </div>
+            <Separator />
           </form>
         </aside>
       </main>
