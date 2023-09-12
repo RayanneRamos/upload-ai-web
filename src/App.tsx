@@ -1,5 +1,5 @@
 import { Button } from "./components/ui/button";
-import { FileVideo, Github, Upload } from "lucide-react";
+import { FileVideo, Github, Upload, Wand2 } from "lucide-react";
 import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Label } from "./components/ui/label";
@@ -105,6 +105,10 @@ export function App() {
               </span>
             </div>
             <Separator />
+            <Button type="submit" className="w-full">
+              Executar
+              <Wand2 className="w-4 h-4 ml-2" />
+            </Button>
           </form>
         </aside>
       </main>
