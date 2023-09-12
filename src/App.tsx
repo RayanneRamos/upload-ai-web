@@ -56,13 +56,13 @@ export function App() {
               className="sr-only"
             />
             <Separator />
-            <div className="space-y-1">
+            <div className="space-y-2">
               <Label htmlFor="transcription_prompt">
                 Prompt de transcrição
               </Label>
               <Textarea
                 id="transcription_prompt"
-                className="min-h-20 leading-relaxed"
+                className="h-20 leading-relaxed resize-none"
                 placeholder="Inclua palavras-chave mencionadas no vídeo separadas por vírgula (,)"
               />
             </div>
@@ -71,7 +71,10 @@ export function App() {
               <Upload className="w-4 h-4 ml-2" />
             </Button>
           </form>
-          <form></form>
+          <Separator />
+          <form className="space-y-6">
+            <div className="space-y-1"></div>
+          </form>
         </aside>
       </main>
     </div>
